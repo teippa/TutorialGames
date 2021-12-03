@@ -69,6 +69,9 @@ public class UserControl : MonoBehaviour
                 }
                 break;
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 
     void DeselectUnit()

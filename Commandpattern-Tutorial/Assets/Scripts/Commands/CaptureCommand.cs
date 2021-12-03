@@ -29,8 +29,8 @@ public class CaptureCommand : CommandManager.ICommand
 
     public void Undo()
     {
-        Gameboard.Instance.MoveUnit(m_Captured, m_To);
         Gameboard.Instance.MoveUnit(m_Capturing, m_From);
+        Gameboard.Instance.MoveUnit(m_Captured, m_To);
 
 
         Gameboard.Instance.SwitchTeam();
