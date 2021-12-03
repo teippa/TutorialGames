@@ -48,5 +48,8 @@ public class PlayerController : MonoBehaviour
                 laser.GetComponent<LaserController>().Shoot();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
     }
 }
