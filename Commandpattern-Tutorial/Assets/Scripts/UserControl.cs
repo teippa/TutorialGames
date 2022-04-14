@@ -49,8 +49,13 @@ public class UserControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Quit with ESC
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+
+
         //We still have an animation underway, we can't interact yet.
-        if(Gameboard.Instance.AnimationSystem.IsAnimating)
+        if (Gameboard.Instance.AnimationSystem.IsAnimating)
             return;
         
         switch (m_CurrentState)
@@ -70,8 +75,6 @@ public class UserControl : MonoBehaviour
                 break;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit();
     }
 
     void DeselectUnit()
